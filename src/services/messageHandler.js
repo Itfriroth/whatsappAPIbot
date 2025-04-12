@@ -31,7 +31,7 @@ import whatsappService from './whatsappService.js';
     }
     async sendWelcomeMessage(to,messageId,senderInfo){
       const name= this.getSenderName(senderInfo);
-      const welcomeMessage='Hola, Bienvenido a nuestro servicio de Inmobiliaria YoYo En que podemos ayudarle hoy?';
+      const welcomeMessage=`Hola ${name}, Bienvenido a nuestro servicio de Inmobiliaria YoYo En que podemos ayudarle hoy?`;
       await whatsappService.sendMessage(to,welcomeMessage,messageId);
     }
     async handleMenuOption(to, option){
