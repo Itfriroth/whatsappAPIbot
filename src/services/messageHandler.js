@@ -7,7 +7,7 @@ import whatsappService from './whatsappService.js';
 
 
        if(this.isGreeting(incomingMessage)){
-         await this.sendWelcomeMessage(message.from, message.id,senderInfo)
+         await this.sendWelcomeMessage(message.from, message.id,senderInfo);
          await this.sendWelcomeMenu(message.from);
         }else {
          const response = `Echo: ${message.text.body}`;
